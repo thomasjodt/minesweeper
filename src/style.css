@@ -1,0 +1,116 @@
+html, body {
+  background-color: #1d1d1d;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  color: #9ec4d1;
+  text-shadow: #62F5FF 0 0 16px;
+  background-color: #353535;
+  border: 1px solid #242424;
+  border-radius: 8px;
+  height: 64px;
+  width: 64px;
+  font-size: 24px;
+  transition: transform 150ms ease;
+  user-select: none;
+}
+
+button:disabled {
+  background-color: #242424;
+}
+
+button:hover:not(:disabled) {
+  cursor: pointer;
+  background-color: #545556;
+}
+
+button:active:not(:disabled) {
+  cursor: pointer;
+  background-color: #666;
+  transform: scale(0.9);
+  transition: background-color 150ms ease;
+}
+
+button.flagged {
+  text-shadow: none;
+}
+
+button.mine {
+  background-color: #88495f;
+  text-shadow: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 768px;
+  margin-inline: auto;
+  margin-block: 32px;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 64px;
+}
+
+button.restart {
+  background-color: #06c;
+  text-shadow: none;
+  border: none;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding-inline: 16px;
+  padding-block: 12px;
+  font-size: 16px;
+}
+
+button.restart:hover {
+  background-color: #06c;
+  filter: brightness(0.8);
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  gap: 2px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  gap: 2px;
+}
+
+footer {
+  color: white;
+  font-family: sans-serif;
+  padding: 24px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+}
